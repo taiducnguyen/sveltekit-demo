@@ -2,58 +2,56 @@
 	export const prerender = true;
 </script>
 
-<script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-</script>
-
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
+<main class="container">
+	<h1 class="title">Measure page quality</h1>
 
-		to your new<br />SvelteKit app
-	</h1>
+	<p class="description">
+		Test your pages in a lab environment powered by PageSpeed Insights. Then get tips and
+		recommendations to improve your user experience. For field performance, see the <a
+			target="_blank"
+			href="https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect">PageSpeed Insights</a
+		> tool.
+	</p>
 
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+	<img src="/testing.jpg" width={400} height={400} alt="Testing"/>
+</main>
 
 <style>
-	section {
+	.container {
+		min-height: 100vh;
+		padding: 0 0.5rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	main {
+		padding: 5rem 0;
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
-	h1 {
-		width: 100%;
+	.title {
+		margin: 0;
+		line-height: 1.15;
+		font-size: 4rem;
 	}
 
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+	.title,
+	.description {
+		text-align: center;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.description {
+		line-height: 1.5;
+		font-size: 1.5rem;
 	}
 </style>
