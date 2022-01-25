@@ -7,7 +7,7 @@
 </svelte:head>
 
 <main class="container">
-	<h1 class="title">Measure page quality</h1>
+	<h1 class="title">SvelteKit - Measure page quality</h1>
 
 	<p class="description">
 		Test your pages in a lab environment powered by PageSpeed Insights. Then get tips and
