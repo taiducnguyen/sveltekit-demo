@@ -1,2 +1,2 @@
 # sveltekit-demo
-sveltekit-demo
+https://elastic-goldwasser-c963ff.netlify.app/
